@@ -1,12 +1,25 @@
-html {
-    font-size: 62.5%;
-  }
-  
   body {
     margin: 0;
-    padding: 0;
-    font-size: 1.8rem;
-    font-family: 'Roboto', Helvetica, sans-serif;
-    color: red;
-    background-color: $background;
+    font-size: 1em;
+    font-family: $font-body ,sans-serif;
+    line-height: 2em;    
+    background: url(#{$imagesPath}/bg.gif) $background repeat-x;
+   
+  }
+
+  main {
+    @include setContentWidth;
+    margin:0 auto;
+    padding:0 10px;
+
+    @include break(959px){
+      width:768px;
+    }
+    @include break(767px){
+      width:460px;
+    }
+    @include break(459px){
+      width: 300px;
+    }
+
   }

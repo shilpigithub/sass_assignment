@@ -1,0 +1,94 @@
+/* CONTENT */
+#headline {
+    @include setWidthHeightBckgrnd(100%, 130px, $red);
+    // width: 100%;
+    // height: 130px;
+    // background: $red;
+    text-align:center;
+    margin:0 auto;
+    
+    h1 {
+
+        @include setHeadingsColorFontSzWt($white, 2.5em, 100);
+        // color:$white;
+        // font-size:2.5em;
+        // font-weight:100;
+        padding-top:50px;
+        @include break(767px){
+            font-size:2em;
+            padding-top:50px;
+        }
+        @include break(459px){
+            font-size:1.5em;
+            padding-top:30px;
+        }
+    }
+}
+
+#content {
+    @include setContentWidth;
+    margin:20px auto;
+    h3 {
+        @include setHeadingsColorFontSzWt($darkGrey, 2em, 400);
+        // color:$darkGrey;
+        // font-size:2em;
+        // font-weight:400;
+        @include break(459px){
+            font-size:1.6em;
+        }
+    }
+    #products {
+        width:460px;
+        float:left;
+
+
+        img {
+            float:left;
+            margin-right:20px;
+        
+        }
+        article {
+            @include clearfix;
+            margin-bottom:40px;
+            img{
+                @include break(459px){
+                    display:none;
+                }
+            }
+
+        }
+        h4{
+            line-height:1em; 
+        }
+        @include break(959px){
+            width:46%;
+            margin:0 2%;
+          }
+          @include break(767px){
+            width:96%;
+            margin:0 2%;
+            float:none;
+          }
+       
+    }
+    #testimonials {
+        width:460px;float:right;
+        @include break(959px){
+            width:46%;
+            margin:0 2%;
+          }
+        @include break(767px){
+            width:96%;
+            margin:0 2%;
+            float:none;
+        }
+    }
+    @include clearfix;
+    @include break(959px){
+        width:inherit;
+      }
+ 
+
+}
+          
+

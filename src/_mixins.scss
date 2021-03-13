@@ -1,0 +1,42 @@
+@mixin setWidthHeightBckgrnd($wid: 940px, $ht: 90px, $bkgrnd: $lightGreyBackGround) {
+
+    width: $wid;
+    height: $ht;
+    background-color: $bkgrnd;
+}
+
+@mixin setHeadingsColorFontSzWt($cl: $white, $sz: 2.5em, $wt: 100){
+    color: $cl;
+    font-size: $sz;
+    font-weight: $wt;
+
+}
+
+@mixin setContentWidth($wid: 940px) {
+    width: $wid;
+
+}
+
+@mixin clearfix{
+    &:before, &:after {
+        content: '';
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+
+@mixin break($args...){
+    @if length($args) == 1 {
+        @media (max-width: nth($args, 1)) {
+            @content;
+        }
+    } @else {
+        @media (min-width: nth($args, 1)) and (max-width: nth($args, 2)) {
+            @content;
+        }
+    }
+   
+}
