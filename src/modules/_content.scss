@@ -61,7 +61,8 @@
             line-height:1em; 
         }
         @include break(959px){
-            width:46%;
+            //width:46%;
+            width:( ( 100% / 2 ) - ( 2 + 2 ) );
             margin:0 2%;
           }
           @include break(767px){
@@ -74,7 +75,8 @@
     #testimonials {
         width:460px;float:right;
         @include break(959px){
-            width:46%;
+            //width:46%;
+            width:( ( 100% / 2 ) - ( 2 + 2 ) );
             margin:0 2%;
           }
         @include break(767px){
